@@ -1,0 +1,9 @@
+{
+    "parser": "@figma/code-connect/react",
+    "include": [
+        ".figma/**/*.figma.tsx"
+    ],
+    "importPaths": {
+        "@/components/ui/*": "./src/components/ui/*"
+    }
+}

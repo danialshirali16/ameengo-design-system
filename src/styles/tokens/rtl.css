@@ -1,0 +1,253 @@
+/* 
+ * RTL (Right-to-Left) Support
+ * Utilities and overrides for Arabic, Hebrew, Persian, and other RTL languages
+ */
+
+html[dir="rtl"] {
+    /* Text alignment */
+    text-align: start;
+
+    /* Force RTL direction for all content */
+    direction: rtl;
+}
+
+/* RTL-specific spacing adjustments for components */
+@layer components {
+
+    /* Fix auto margins in RTL */
+    html[dir="rtl"] .ml-auto {
+        margin-left: 0;
+        margin-right: auto;
+    }
+
+    html[dir="rtl"] .mr-auto {
+        margin-right: 0;
+        margin-left: auto;
+    }
+
+    /* Fix flexbox alignment */
+    html[dir="rtl"] .flex-row-reverse {
+        flex-direction: row;
+    }
+
+    html[dir="rtl"] .flex-row {
+        flex-direction: row-reverse;
+    }
+
+    /* Icon positioning fixes */
+    html[dir="rtl"] [data-slot="icon-start"] {
+        order: 2;
+    }
+
+    html[dir="rtl"] [data-slot="icon-end"] {
+        order: 0;
+    }
+
+    /* Dialog and modal positioning */
+    html[dir="rtl"] [data-slot="dialog-content"],
+    html[dir="rtl"] [data-slot="sheet-content"] {
+        left: auto;
+        right: 0;
+    }
+
+    /* Dropdown menu positioning */
+    html[dir="rtl"] [data-side="left"] {
+        --radix-dropdown-menu-content-transform-origin: right center;
+    }
+
+    html[dir="rtl"] [data-side="right"] {
+        --radix-dropdown-menu-content-transform-origin: left center;
+    }
+
+    /* Carousel navigation */
+    html[dir="rtl"] [data-slot="carousel-previous"] {
+        left: auto;
+        right: 0;
+    }
+
+    html[dir="rtl"] [data-slot="carousel-next"] {
+        right: auto;
+        left: 0;
+    }
+
+    /* Resizable panels - flip handle */
+    html[dir="rtl"] [data-slot="resizable-handle"] {
+        transform: scaleX(-1);
+    }
+
+    /* Navigation menu alignment */
+    html[dir="rtl"] [data-slot="navigation-menu"] {
+        direction: rtl;
+    }
+
+    /* Breadcrumb separator flip */
+    html[dir="rtl"] [data-slot="breadcrumb-separator"] {
+        transform: scaleX(-1);
+    }
+
+    /* Sidebar positioning */
+    html[dir="rtl"] [data-slot="sidebar"] {
+        left: auto;
+        right: 0;
+    }
+
+    /* Command palette positioning */
+    html[dir="rtl"] [data-slot="command-shortcut"] {
+        margin-left: 0;
+        margin-right: auto;
+    }
+
+    /* Table text alignment */
+    html[dir="rtl"] th:first-child,
+    html[dir="rtl"] td:first-child {
+        text-align: right;
+    }
+
+    /* Form labels */
+    html[dir="rtl"] label {
+        text-align: right;
+    }
+
+    /* Alert icons */
+    html[dir="rtl"] [data-slot="alert"] svg {
+        margin-left: 0.75rem;
+        margin-right: 0;
+    }
+
+    /* Toast notifications positioning */
+    html[dir="rtl"] [data-sonner-toaster] {
+        left: auto !important;
+        right: 0 !important;
+    }
+
+    html[dir="rtl"] [data-sonner-toaster][data-x-position="left"] {
+        left: auto !important;
+        right: 0 !important;
+    }
+
+    html[dir="rtl"] [data-sonner-toaster][data-x-position="right"] {
+        right: auto !important;
+        left: 0 !important;
+    }
+}
+
+/* Logical properties preference - automatically handles RTL */
+@layer base {
+
+    /* Use logical properties where possible for better RTL support */
+    * {
+        /* Border radius */
+        border-start-start-radius: inherit;
+        border-start-end-radius: inherit;
+        border-end-start-radius: inherit;
+        border-end-end-radius: inherit;
+    }
+}
+
+/* Utility classes for RTL-aware spacing */
+@layer utilities {
+
+    /* Margin inline (horizontal) */
+    .ms-auto {
+        margin-inline-start: auto;
+    }
+
+    .me-auto {
+        margin-inline-end: auto;
+    }
+
+    /* Padding inline */
+    .ps-0 {
+        padding-inline-start: 0;
+    }
+
+    .ps-1 {
+        padding-inline-start: 0.25rem;
+    }
+
+    .ps-2 {
+        padding-inline-start: 0.5rem;
+    }
+
+    .ps-3 {
+        padding-inline-start: 0.75rem;
+    }
+
+    .ps-4 {
+        padding-inline-start: 1rem;
+    }
+
+    .ps-6 {
+        padding-inline-start: 1.5rem;
+    }
+
+    .ps-8 {
+        padding-inline-start: 2rem;
+    }
+
+    .pe-0 {
+        padding-inline-end: 0;
+    }
+
+    .pe-1 {
+        padding-inline-end: 0.25rem;
+    }
+
+    .pe-2 {
+        padding-inline-end: 0.5rem;
+    }
+
+    .pe-3 {
+        padding-inline-end: 0.75rem;
+    }
+
+    .pe-4 {
+        padding-inline-end: 1rem;
+    }
+
+    .pe-6 {
+        padding-inline-end: 1.5rem;
+    }
+
+    .pe-8 {
+        padding-inline-end: 2rem;
+    }
+
+    /* Text alignment */
+    .text-start {
+        text-align: start;
+    }
+
+    .text-end {
+        text-align: end;
+    }
+
+    /* Float */
+    .float-start {
+        float: inline-start;
+    }
+
+    .float-end {
+        float: inline-end;
+    }
+
+    /* Border */
+    .border-s {
+        border-inline-start-width: 1px;
+    }
+
+    .border-e {
+        border-inline-end-width: 1px;
+    }
+
+    /* Rounded corners - logical */
+    .rounded-s {
+        border-start-start-radius: var(--radius);
+        border-end-start-radius: var(--radius);
+    }
+
+    .rounded-e {
+        border-start-end-radius: var(--radius);
+        border-end-end-radius: var(--radius);
+    }
+}

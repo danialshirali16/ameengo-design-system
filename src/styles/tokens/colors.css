@@ -1,0 +1,89 @@
+/* 
+ * Design System Color Tokens
+ * These are the primitive color values used throughout the design system.
+ * Semantic tokens reference these primitives.
+ */
+
+:root {
+  /* === PRIMITIVE COLORS === */
+  
+  /* Gray Scale - Zinc based */
+  --ds-gray-50: oklch(0.985 0 0);
+  --ds-gray-100: oklch(0.967 0.001 286.375);
+  --ds-gray-200: oklch(0.92 0.004 286.32);
+  --ds-gray-300: oklch(0.871 0.006 286.286);
+  --ds-gray-400: oklch(0.705 0.015 286.067);
+  --ds-gray-500: oklch(0.552 0.016 285.938);
+  --ds-gray-600: oklch(0.442 0.017 285.786);
+  --ds-gray-700: oklch(0.37 0.013 285.805);
+  --ds-gray-800: oklch(0.274 0.006 286.033);
+  --ds-gray-900: oklch(0.21 0.006 285.885);
+  --ds-gray-950: oklch(0.141 0.005 285.823);
+
+  /* Primary - Blue */
+  --ds-primary-50: oklch(0.97 0.014 254.604);
+  --ds-primary-100: oklch(0.932 0.032 255.508);
+  --ds-primary-200: oklch(0.882 0.059 254.128);
+  --ds-primary-300: oklch(0.809 0.105 251.813);
+  --ds-primary-400: oklch(0.707 0.165 254.624);
+  --ds-primary-500: oklch(0.623 0.214 259.815);
+  --ds-primary-600: oklch(0.546 0.245 262.881);
+  --ds-primary-700: oklch(0.488 0.243 264.376);
+  --ds-primary-800: oklch(0.424 0.199 265.638);
+  --ds-primary-900: oklch(0.379 0.146 265.522);
+  --ds-primary-950: oklch(0.282 0.091 267.935);
+
+  /* Success - Green */
+  --ds-success-50: oklch(0.982 0.018 166.913);
+  --ds-success-100: oklch(0.962 0.044 163.051);
+  --ds-success-200: oklch(0.925 0.084 155.995);
+  --ds-success-300: oklch(0.871 0.15 154.449);
+  --ds-success-400: oklch(0.792 0.209 151.711);
+  --ds-success-500: oklch(0.723 0.219 149.579);
+  --ds-success-600: oklch(0.627 0.194 149.214);
+  --ds-success-700: oklch(0.527 0.154 150.069);
+  --ds-success-800: oklch(0.448 0.119 151.328);
+  --ds-success-900: oklch(0.393 0.095 152.535);
+  --ds-success-950: oklch(0.266 0.065 152.934);
+
+  /* Warning - Amber */
+  --ds-warning-50: oklch(0.987 0.022 95.277);
+  --ds-warning-100: oklch(0.962 0.059 95.617);
+  --ds-warning-200: oklch(0.924 0.12 95.746);
+  --ds-warning-300: oklch(0.879 0.169 91.605);
+  --ds-warning-400: oklch(0.828 0.189 84.429);
+  --ds-warning-500: oklch(0.769 0.188 70.08);
+  --ds-warning-600: oklch(0.666 0.179 58.318);
+  --ds-warning-700: oklch(0.555 0.163 48.998);
+  --ds-warning-800: oklch(0.473 0.137 46.201);
+  --ds-warning-900: oklch(0.414 0.112 45.904);
+  --ds-warning-950: oklch(0.279 0.077 45.635);
+
+  /* Error - Red */
+  --ds-error-50: oklch(0.971 0.013 17.38);
+  --ds-error-100: oklch(0.936 0.032 17.717);
+  --ds-error-200: oklch(0.885 0.062 18.334);
+  --ds-error-300: oklch(0.808 0.114 19.571);
+  --ds-error-400: oklch(0.704 0.191 22.216);
+  --ds-error-500: oklch(0.637 0.237 25.331);
+  --ds-error-600: oklch(0.577 0.245 27.325);
+  --ds-error-700: oklch(0.505 0.213 27.518);
+  --ds-error-800: oklch(0.444 0.177 26.899);
+  --ds-error-900: oklch(0.396 0.141 25.723);
+  --ds-error-950: oklch(0.258 0.092 26.042);
+
+  /* Info - Cyan */
+  --ds-info-50: oklch(0.984 0.019 200.873);
+  --ds-info-100: oklch(0.956 0.045 203.388);
+  --ds-info-200: oklch(0.917 0.08 205.041);
+  --ds-info-300: oklch(0.865 0.127 207.078);
+  --ds-info-400: oklch(0.789 0.154 211.53);
+  --ds-info-500: oklch(0.715 0.143 215.221);
+  --ds-info-600: oklch(0.609 0.126 221.723);
+  --ds-info-700: oklch(0.52 0.105 223.128);
+  --ds-info-800: oklch(0.45 0.085 224.283);
+  --ds-info-900: oklch(0.398 0.07 227.392);
+  --ds-info-950: oklch(0.302 0.056 229.695);
+}
+
+/* Dark mode color adjustments are handled in globals.css */

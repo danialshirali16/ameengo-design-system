@@ -1,0 +1,225 @@
+/* 
+ * Design System Animation & Effects Tokens
+ * Transitions, shadows, and other visual effects
+ */
+
+:root {
+    /* === BORDER RADIUS === */
+    --ds-radius-none: 0;
+    --ds-radius-sm: calc(var(--radius) - 4px);
+    --ds-radius-md: calc(var(--radius) - 2px);
+    --ds-radius-DEFAULT: var(--radius);
+    --ds-radius-lg: var(--radius);
+    --ds-radius-xl: calc(var(--radius) + 4px);
+    --ds-radius-2xl: calc(var(--radius) + 8px);
+    --ds-radius-3xl: calc(var(--radius) + 12px);
+    --ds-radius-full: 9999px;
+
+    /* === SHADOWS === */
+    --ds-shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --ds-shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    --ds-shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --ds-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --ds-shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    --ds-shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+    --ds-shadow-inner: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+    --ds-shadow-none: 0 0 #0000;
+
+    /* === TRANSITION DURATIONS === */
+    --ds-duration-75: 75ms;
+    --ds-duration-100: 100ms;
+    --ds-duration-150: 150ms;
+    --ds-duration-200: 200ms;
+    --ds-duration-300: 300ms;
+    --ds-duration-500: 500ms;
+    --ds-duration-700: 700ms;
+    --ds-duration-1000: 1000ms;
+
+    /* === TRANSITION TIMING FUNCTIONS === */
+    --ds-ease-linear: linear;
+    --ds-ease-in: cubic-bezier(0.4, 0, 1, 1);
+    --ds-ease-out: cubic-bezier(0, 0, 0.2, 1);
+    --ds-ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+    --ds-ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    /* === Z-INDEX SCALE === */
+    --ds-z-0: 0;
+    --ds-z-10: 10;
+    --ds-z-20: 20;
+    --ds-z-30: 30;
+    --ds-z-40: 40;
+    --ds-z-50: 50;
+    --ds-z-dropdown: 100;
+    --ds-z-sticky: 200;
+    --ds-z-fixed: 300;
+    --ds-z-modal-backdrop: 400;
+    --ds-z-modal: 500;
+    --ds-z-popover: 600;
+    --ds-z-tooltip: 700;
+
+    /* === OPACITY === */
+    --ds-opacity-0: 0;
+    --ds-opacity-5: 0.05;
+    --ds-opacity-10: 0.1;
+    --ds-opacity-20: 0.2;
+    --ds-opacity-25: 0.25;
+    --ds-opacity-30: 0.3;
+    --ds-opacity-40: 0.4;
+    --ds-opacity-50: 0.5;
+    --ds-opacity-60: 0.6;
+    --ds-opacity-70: 0.7;
+    --ds-opacity-75: 0.75;
+    --ds-opacity-80: 0.8;
+    --ds-opacity-90: 0.9;
+    --ds-opacity-95: 0.95;
+    --ds-opacity-100: 1;
+}
+
+/* === TRANSITION PRESETS === */
+@layer components {
+    .ds-transition-colors {
+        transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+        transition-timing-function: var(--ds-ease-in-out);
+        transition-duration: var(--ds-duration-150);
+    }
+
+    .ds-transition-opacity {
+        transition-property: opacity;
+        transition-timing-function: var(--ds-ease-in-out);
+        transition-duration: var(--ds-duration-150);
+    }
+
+    .ds-transition-shadow {
+        transition-property: box-shadow;
+        transition-timing-function: var(--ds-ease-in-out);
+        transition-duration: var(--ds-duration-150);
+    }
+
+    .ds-transition-transform {
+        transition-property: transform;
+        transition-timing-function: var(--ds-ease-in-out);
+        transition-duration: var(--ds-duration-200);
+    }
+
+    .ds-transition-all {
+        transition-property: all;
+        transition-timing-function: var(--ds-ease-in-out);
+        transition-duration: var(--ds-duration-200);
+    }
+}
+
+/* === ANIMATION KEYFRAMES === */
+@keyframes ds-fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes ds-fade-out {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes ds-slide-up {
+    from {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes ds-slide-down {
+    from {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes ds-scale-in {
+    from {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes ds-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes ds-pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes ds-bounce {
+
+    0%,
+    100% {
+        transform: translateY(-5%);
+        animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+
+    50% {
+        transform: translateY(0);
+        animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+}
+
+/* Animation utility classes */
+@layer components {
+    .ds-animate-fade-in {
+        animation: ds-fade-in var(--ds-duration-200) var(--ds-ease-out);
+    }
+
+    .ds-animate-slide-up {
+        animation: ds-slide-up var(--ds-duration-300) var(--ds-ease-out);
+    }
+
+    .ds-animate-scale-in {
+        animation: ds-scale-in var(--ds-duration-200) var(--ds-ease-spring);
+    }
+
+    .ds-animate-spin {
+        animation: ds-spin 1s linear infinite;
+    }
+
+    .ds-animate-pulse {
+        animation: ds-pulse 2s var(--ds-ease-in-out) infinite;
+    }
+}

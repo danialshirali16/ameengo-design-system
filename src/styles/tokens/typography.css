@@ -1,0 +1,132 @@
+/* 
+ * Design System Typography Tokens
+ * Font families, sizes, weights, and line heights
+ */
+
+:root {
+    /* === FONT FAMILIES === */
+    --ds-font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --ds-font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+
+    /* === FONT SIZES === */
+    /* Using a modular scale (1.25 ratio) */
+    --ds-text-xs: 0.75rem;
+    /* 12px */
+    --ds-text-sm: 0.875rem;
+    /* 14px */
+    --ds-text-base: 1rem;
+    /* 16px */
+    --ds-text-lg: 1.125rem;
+    /* 18px */
+    --ds-text-xl: 1.25rem;
+    /* 20px */
+    --ds-text-2xl: 1.5rem;
+    /* 24px */
+    --ds-text-3xl: 1.875rem;
+    /* 30px */
+    --ds-text-4xl: 2.25rem;
+    /* 36px */
+    --ds-text-5xl: 3rem;
+    /* 48px */
+    --ds-text-6xl: 3.75rem;
+    /* 60px */
+    --ds-text-7xl: 4.5rem;
+    /* 72px */
+    --ds-text-8xl: 6rem;
+    /* 96px */
+    --ds-text-9xl: 8rem;
+    /* 128px */
+
+    /* === FONT WEIGHTS === */
+    --ds-font-thin: 100;
+    --ds-font-extralight: 200;
+    --ds-font-light: 300;
+    --ds-font-normal: 400;
+    --ds-font-medium: 500;
+    --ds-font-semibold: 600;
+    --ds-font-bold: 700;
+    --ds-font-extrabold: 800;
+    --ds-font-black: 900;
+
+    /* === LINE HEIGHTS === */
+    --ds-leading-none: 1;
+    --ds-leading-tight: 1.25;
+    --ds-leading-snug: 1.375;
+    --ds-leading-normal: 1.5;
+    --ds-leading-relaxed: 1.625;
+    --ds-leading-loose: 2;
+
+    /* === LETTER SPACING === */
+    --ds-tracking-tighter: -0.05em;
+    --ds-tracking-tight: -0.025em;
+    --ds-tracking-normal: 0;
+    --ds-tracking-wide: 0.025em;
+    --ds-tracking-wider: 0.05em;
+    --ds-tracking-widest: 0.1em;
+}
+
+/* === TYPOGRAPHY UTILITY CLASSES === */
+@layer components {
+    .ds-heading-1 {
+        font-size: var(--ds-text-5xl);
+        font-weight: var(--ds-font-bold);
+        line-height: var(--ds-leading-tight);
+        letter-spacing: var(--ds-tracking-tight);
+    }
+
+    .ds-heading-2 {
+        font-size: var(--ds-text-4xl);
+        font-weight: var(--ds-font-bold);
+        line-height: var(--ds-leading-tight);
+        letter-spacing: var(--ds-tracking-tight);
+    }
+
+    .ds-heading-3 {
+        font-size: var(--ds-text-3xl);
+        font-weight: var(--ds-font-semibold);
+        line-height: var(--ds-leading-snug);
+    }
+
+    .ds-heading-4 {
+        font-size: var(--ds-text-2xl);
+        font-weight: var(--ds-font-semibold);
+        line-height: var(--ds-leading-snug);
+    }
+
+    .ds-heading-5 {
+        font-size: var(--ds-text-xl);
+        font-weight: var(--ds-font-medium);
+        line-height: var(--ds-leading-normal);
+    }
+
+    .ds-heading-6 {
+        font-size: var(--ds-text-lg);
+        font-weight: var(--ds-font-medium);
+        line-height: var(--ds-leading-normal);
+    }
+
+    .ds-body-lg {
+        font-size: var(--ds-text-lg);
+        line-height: var(--ds-leading-relaxed);
+    }
+
+    .ds-body {
+        font-size: var(--ds-text-base);
+        line-height: var(--ds-leading-normal);
+    }
+
+    .ds-body-sm {
+        font-size: var(--ds-text-sm);
+        line-height: var(--ds-leading-normal);
+    }
+
+    .ds-caption {
+        font-size: var(--ds-text-xs);
+        line-height: var(--ds-leading-normal);
+    }
+
+    .ds-code {
+        font-family: var(--ds-font-mono);
+        font-size: var(--ds-text-sm);
+    }
+}

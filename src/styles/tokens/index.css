@@ -1,0 +1,10 @@
+/* 
+ * Design System Tokens Index
+ * Central import file for all design tokens
+ */
+
+@import "./colors.css";
+@import "./typography.css";
+@import "./spacing.css";
+@import "./effects.css";
+@import "./rtl.css";
