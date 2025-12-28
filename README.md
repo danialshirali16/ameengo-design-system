@@ -9,13 +9,16 @@ A modern, production-ready design system built with **Next.js 15**, **Tailwind C
 
 ## Features
 
-- 🎨 **Design Tokens** - Comprehensive color, typography, spacing, and effect tokens
-- 🧱 **Component Library** - Built on shadcn/ui with 46+ accessible components
-- 🌙 **Dark Mode** - Full dark mode support with CSS variables
-- 🌍 **RTL Support** - Full right-to-left language support (Arabic, Hebrew, Persian, etc.)
-- 🔗 **Figma Code Connect** - Seamless design-to-code workflow
-- ⚡ **Next.js 15** - Latest Next.js with App Router
-- 📱 **Responsive** - Mobile-first responsive design
+| 🎨 **Design Tokens** | 🧱 **Component Library** | 🌙 **Dark Mode** |
+| :--- | :--- | :--- |
+| Comprehensive color, typography, spacing, and effect tokens | Built on shadcn/ui with 46+ accessible components | Full dark mode support with CSS variables |
+
+| 🌍 **RTL Support** | 🔗 **Figma Code Connect** | ⚡ **Next.js 15** |
+| :--- | :--- | :--- |
+| Full right-to-left language support (Arabic, Persian, etc.) | Seamless design-to-code workflow | Latest Next.js with App Router |
+
+| 📱 **Responsive** | | |
+| :
 
 ## Getting Started
 
