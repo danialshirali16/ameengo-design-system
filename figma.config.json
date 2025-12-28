@@ -5,5 +5,13 @@
     ],
     "importPaths": {
         "@/components/ui/*": "./src/components/ui/*"
+    },
+    "codeConnect": {
+        "include": [
+            "src/components/**/*.tsx"
+        ],
+        "exclude": [
+            "src/components/**/*.test.tsx"
+        ]
     }
 }
