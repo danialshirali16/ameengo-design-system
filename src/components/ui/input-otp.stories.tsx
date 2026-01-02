@@ -6,17 +6,17 @@ import {
     InputOTPSlot,
 } from './input-otp'
 
-const meta: Meta<typeof InputOTP> = {
+const meta = {
     title: 'UI/InputOTP',
     component: InputOTP,
     tags: ['autodocs'],
-}
+} satisfies Meta<typeof InputOTP>
 
 export default meta
 type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
-    // @ts-ignore - Custom render function
+    args: {} as any,
     render: () => (
         <InputOTP maxLength={6}>
             <InputOTPGroup>

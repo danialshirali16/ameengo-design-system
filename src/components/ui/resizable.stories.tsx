@@ -15,7 +15,8 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
-    // @ts-ignore - Custom render function
+    args: {},
+
     render: () => (
         <ResizablePanelGroup
             direction="horizontal"

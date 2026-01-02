@@ -16,7 +16,8 @@ const tags = Array.from({ length: 50 }).map(
 )
 
 export const Default: Story = {
-    // @ts-ignore - Custom render function
+    args: {},
+
     render: () => (
         <ScrollArea className="h-72 w-48 rounded-md border">
             <div className="p-4">

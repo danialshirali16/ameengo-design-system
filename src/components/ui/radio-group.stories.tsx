@@ -12,7 +12,8 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
-    // @ts-ignore - Custom render function
+    args: {},
+
     render: () => (
         <RadioGroup defaultValue="option-one">
             <div className="flex items-center space-x-2">

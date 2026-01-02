@@ -30,7 +30,8 @@ const formSchema = z.object({
 })
 
 export const Default: Story = {
-    // @ts-ignore - Custom render function
+    args: {},
+
     render: () => {
         // eslint-disable-next-line react-hooks/rules-of-hooks
         const form = useForm<z.infer<typeof formSchema>>({

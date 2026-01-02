@@ -73,7 +73,8 @@ const items = [
 ]
 
 export const Default: Story = {
-    // @ts-ignore - Custom render function
+    args: {},
+
     render: () => (
         <div className="flex min-h-screen w-full">
             <Sidebar>
@@ -116,7 +117,8 @@ export const Default: Story = {
 }
 
 export const WithFooter: Story = {
-    // @ts-ignore - Custom render function
+    args: {},
+
     render: () => (
         <div className="flex min-h-screen w-full">
             <Sidebar>

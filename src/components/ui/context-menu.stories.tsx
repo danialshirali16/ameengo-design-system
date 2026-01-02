@@ -25,7 +25,8 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
-    // @ts-ignore - Custom render function
+    args: {},
+
     render: () => (
         <ContextMenu>
             <ContextMenuTrigger className="flex h-[150px] w-[300px] items-center justify-center rounded-md border border-dashed text-sm">

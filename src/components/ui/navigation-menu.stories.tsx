@@ -48,7 +48,8 @@ const ListItem = React.forwardRef<
 ListItem.displayName = "ListItem"
 
 export const Default: Story = {
-    // @ts-ignore - Custom render function
+    args: {},
+
     render: () => (
         <NavigationMenu>
             <NavigationMenuList>

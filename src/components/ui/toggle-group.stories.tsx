@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { ToggleGroup, ToggleGroupItem } from './toggle-group'
 import { Bold, Italic, Underline } from 'lucide-react'
 
-const meta: Meta<typeof ToggleGroup> = {
+const meta = {
     title: 'UI/ToggleGroup',
     component: ToggleGroup,
     tags: ['autodocs'],
@@ -12,14 +12,13 @@ const meta: Meta<typeof ToggleGroup> = {
             options: ['single', 'multiple'],
         }
     }
-}
+} satisfies Meta<typeof ToggleGroup>
 
 export default meta
 type Story = StoryObj<typeof meta>
 
-// @ts-expect-error - Storybook render function doesn't require args
 export const Default: Story = {
-    args: {},
+    args: {} as any,
     render: () => (
         <ToggleGroup type="multiple">
             <ToggleGroupItem value="bold" aria-label="Toggle bold">
