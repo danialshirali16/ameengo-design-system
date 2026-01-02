@@ -29,7 +29,7 @@ type Story = StoryObj<typeof meta>
 
 const SHEET_SIDES = ["top", "right", "bottom", "left"] as const
 
-type SheetSide = (typeof SHEET_SIDES)[number]
+
 
 
 export const Default: Story = {
@@ -44,7 +44,7 @@ export const Default: Story = {
                 <SheetHeader>
                     <SheetTitle>Edit profile</SheetTitle>
                     <SheetDescription>
-                        Make changes to your profile here. Click save when you're done.
+                        Make changes to your profile here. Click save when you&apos;re done.
                     </SheetDescription>
                 </SheetHeader>
                 <div className="grid gap-4 py-4">
@@ -85,7 +85,7 @@ export const Side: Story = {
                         <SheetHeader>
                             <SheetTitle>Edit profile</SheetTitle>
                             <SheetDescription>
-                                Make changes to your profile here. Click save when you're done.
+                                Make changes to your profile here. Click save when you&apos;re done.
                             </SheetDescription>
                         </SheetHeader>
                         <div className="grid gap-4 py-4">

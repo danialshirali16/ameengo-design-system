@@ -16,16 +16,19 @@ export const Default: Story = {
     args: {},
 
     render: () => {
-        const [date, setDate] = useState<Date | undefined>(new Date())
+        const CalendarDemo = () => {
+            const [date, setDate] = useState<Date | undefined>(new Date())
 
-        return (
-            <Calendar
-                mode="single"
-                selected={date}
-                onSelect={setDate}
-                className="rounded-md border"
-            />
-        )
+            return (
+                <Calendar
+                    mode="single"
+                    selected={date}
+                    onSelect={setDate}
+                    className="rounded-md border"
+                />
+            )
+        }
+        return <CalendarDemo />
     },
 }
 
@@ -33,22 +36,26 @@ export const Range: Story = {
     args: {},
 
     render: () => {
-        const [date, setDate] = useState<{
-            from: Date | undefined
-            to?: Date | undefined
-        }>({
-            from: new Date(2022, 0, 20),
-            to: addDays(new Date(2022, 0, 20), 20),
-        })
+        const CalendarRangeDemo = () => {
+            const [date, setDate] = useState<{
+                from: Date | undefined
+                to?: Date | undefined
+            }>({
+                from: new Date(2022, 0, 20),
+                to: addDays(new Date(2022, 0, 20), 20),
+            })
 
-        return (
-            <Calendar
-                mode="range"
-                defaultMonth={date?.from}
-                selected={date}
-                onSelect={setDate as any}
-                className="rounded-md border"
-            />
-        )
+            return (
+                <Calendar
+                    mode="range"
+                    defaultMonth={date?.from}
+                    selected={date}
+                    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                    onSelect={setDate as any}
+                    className="rounded-md border"
+                />
+            )
+        }
+        return <CalendarRangeDemo />
     },
 }

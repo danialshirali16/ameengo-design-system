@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { AspectRatio } from './aspect-ratio'
-import { Button } from './button'
+
 
 const meta = {
     title: 'UI/AspectRatio',
@@ -21,6 +21,7 @@ export const Default: Story = {
     render: (args) => (
         <div className="w-[450px]">
             <AspectRatio {...args}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                     src="https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?w=800&dpr=2&q=80"
                     alt="Photo by Drew Beamer"

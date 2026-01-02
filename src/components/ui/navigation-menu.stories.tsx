@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
+import Link from 'next/link'
 import {
     NavigationMenu,
     NavigationMenuContent,
@@ -10,7 +11,7 @@ import {
 } from './navigation-menu'
 import { cn } from "@/lib/utils"
 import React from 'react'
-import { Link } from 'lucide-react'
+
 
 const meta = {
     title: 'UI/NavigationMenu',
@@ -59,8 +60,8 @@ export const Default: Story = {
                         <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                             <li className="row-span-3">
                                 <NavigationMenuLink asChild>
-                                    <a
-                                        className="from-muted/50 to-muted flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b p-6 no-underline outline-none focus:shadow-md"
+                                    <Link
+                                        className="from-muted/50 to-muted flex h-full w-full select-none flex-col justify-end rounded-md bg-linear-to-b p-6 no-underline outline-none focus:shadow-md"
                                         href="/"
                                     >
                                         <div className="mb-2 mt-4 text-lg font-medium">
@@ -70,7 +71,7 @@ export const Default: Story = {
                                             Beautifully designed components built with Radix UI and
                                             Tailwind CSS.
                                         </p>
-                                    </a>
+                                    </Link>
                                 </NavigationMenuLink>
                             </li>
                             <ListItem href="/docs" title="Introduction">

@@ -17,14 +17,17 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
-    render: (args) => {
-        const [progress, setProgress] = useState(13)
+    render: () => {
+        const ProgressDemo = () => {
+            const [progress, setProgress] = useState(13)
 
-        useEffect(() => {
-            const timer = setTimeout(() => setProgress(66), 500)
-            return () => clearTimeout(timer)
-        }, [])
+            useEffect(() => {
+                const timer = setTimeout(() => setProgress(66), 500)
+                return () => clearTimeout(timer)
+            }, [])
 
-        return <Progress value={progress} className="w-[60%]" />
+            return <Progress value={progress} className="w-[60%]" />
+        }
+        return <ProgressDemo />
     },
 }
