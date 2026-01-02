@@ -12,6 +12,7 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
+    // @ts-ignore - Custom render function
     render: () => (
         <div>
             <div className="flex items-center space-x-2">

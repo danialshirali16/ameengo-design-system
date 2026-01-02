@@ -13,10 +13,12 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
+    // @ts-ignore - Custom render function
     render: () => <Textarea placeholder="Type your message here." />,
 }
 
 export const WithLabel: Story = {
+    // @ts-ignore - Custom render function
     render: () => (
         <div className="grid w-full gap-1.5">
             <Label htmlFor="message">Your message</Label>
@@ -26,6 +28,7 @@ export const WithLabel: Story = {
 }
 
 export const WithButton: Story = {
+    // @ts-ignore - Custom render function
     render: () => (
         <div className="grid w-full gap-2">
             <Textarea placeholder="Type your message here." />

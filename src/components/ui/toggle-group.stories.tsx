@@ -19,6 +19,7 @@ type Story = StoryObj<typeof meta>
 
 // @ts-expect-error - Storybook render function doesn't require args
 export const Default: Story = {
+    args: {},
     render: () => (
         <ToggleGroup type="multiple">
             <ToggleGroupItem value="bold" aria-label="Toggle bold">

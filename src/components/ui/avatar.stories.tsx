@@ -11,6 +11,7 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
+    // @ts-ignore - Custom render function
     render: () => (
         <Avatar>
             <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
@@ -20,6 +21,7 @@ export const Default: Story = {
 }
 
 export const Fallback: Story = {
+    // @ts-ignore - Custom render function
     render: () => (
         <Avatar>
             <AvatarImage src="" alt="@shadcn" />

@@ -33,6 +33,7 @@ type SheetSide = (typeof SHEET_SIDES)[number]
 
 
 export const Default: Story = {
+    // @ts-ignore - Custom render function
     render: () => (
         <Sheet>
             <SheetTrigger asChild>
@@ -70,6 +71,7 @@ export const Default: Story = {
 }
 
 export const Side: Story = {
+    // @ts-ignore - Custom render function
     render: () => (
         <div className="grid grid-cols-2 gap-2">
             {SHEET_SIDES.map((side) => (

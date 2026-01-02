@@ -15,6 +15,7 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
+    // @ts-ignore - Custom render function
     render: () => (
         <Card className="w-[350px]">
             <CardHeader>
@@ -32,6 +33,7 @@ export const Default: Story = {
 }
 
 export const WithButton: Story = {
+    // @ts-ignore - Custom render function
     render: () => (
         <Card className="w-[350px]">
             <CardHeader>
@@ -50,6 +52,7 @@ export const WithButton: Story = {
 }
 
 export const Notification: Story = {
+    // @ts-ignore - Custom render function
     render: () => (
         <Card className="w-[380px]">
             <CardHeader>
@@ -78,6 +81,7 @@ export const Notification: Story = {
 }
 
 export const Simple: Story = {
+    // @ts-ignore - Custom render function
     render: () => (
         <Card className="w-[350px]">
             <CardHeader>

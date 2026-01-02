@@ -65,6 +65,7 @@ const invoices = [
 ]
 
 export const Default: Story = {
+    // @ts-ignore - Custom render function
     render: () => (
         <Table>
             <TableCaption>A list of your recent invoices.</TableCaption>

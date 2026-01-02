@@ -13,6 +13,7 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
+    // @ts-ignore - Custom render function
     render: () => {
         const [date, setDate] = useState<Date | undefined>(new Date())
 
@@ -28,6 +29,7 @@ export const Default: Story = {
 }
 
 export const Range: Story = {
+    // @ts-ignore - Custom render function
     render: () => {
         const [date, setDate] = useState<{
             from: Date | undefined

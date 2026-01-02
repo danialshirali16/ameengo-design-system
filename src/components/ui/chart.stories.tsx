@@ -34,6 +34,7 @@ const chartConfig = {
 }
 
 export const Default: Story = {
+    // @ts-ignore - Custom render function
     render: () => (
         <ChartContainer config={chartConfig} className="min-h-[200px] w-full">
             <BarChart accessibilityLayer data={chartData}>

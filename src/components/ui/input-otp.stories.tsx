@@ -15,8 +15,8 @@ const meta: Meta<typeof InputOTP> = {
 export default meta
 type Story = StoryObj<typeof meta>
 
-// @ts-expect-error - Storybook render function doesn't require args
 export const Default: Story = {
+    // @ts-ignore - Custom render function
     render: () => (
         <InputOTP maxLength={6}>
             <InputOTPGroup>

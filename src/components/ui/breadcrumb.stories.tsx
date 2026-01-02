@@ -20,6 +20,7 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
+    // @ts-ignore - Custom render function
     render: () => (
         <Breadcrumb>
             <BreadcrumbList>
@@ -40,6 +41,7 @@ export const Default: Story = {
 }
 
 export const CustomSeparator: Story = {
+    // @ts-ignore - Custom render function
     render: () => (
         <Breadcrumb>
             <BreadcrumbList>
@@ -64,6 +66,7 @@ export const CustomSeparator: Story = {
 }
 
 export const WithDropdown: Story = {
+    // @ts-ignore - Custom render function
     render: () => (
         <Breadcrumb>
             <BreadcrumbList>

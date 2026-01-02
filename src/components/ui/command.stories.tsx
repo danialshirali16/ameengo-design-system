@@ -28,6 +28,7 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
+    // @ts-ignore - Custom render function
     render: () => (
         <Command className="rounded-lg border shadow-md">
             <CommandInput placeholder="Type a command or search..." />

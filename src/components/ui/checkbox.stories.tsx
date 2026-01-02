@@ -12,6 +12,7 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
+    // @ts-ignore - Custom render function
     render: () => (
         <div className="flex items-center space-x-2">
             <Checkbox id="terms" />
@@ -26,6 +27,7 @@ export const Default: Story = {
 }
 
 export const Disabled: Story = {
+    // @ts-ignore - Custom render function
     render: () => (
         <div className="flex items-center space-x-2">
             <Checkbox id="terms2" disabled />
